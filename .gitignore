@@ -1,0 +1,7 @@
+/lumen.log
+/vendor
+/storage
+.settings/
+.env
+.project
+.buildpath
