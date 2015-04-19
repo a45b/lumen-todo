@@ -22,8 +22,11 @@
         <td>
             {{todo.created_at |date:'medium'}}
         </td>
-        <td>
-            <input type="checkbox" ng-change="todoStatusChanged(todo)" ng-value="todo.done" ng-model="todo.done">
+        <td ng-show="todo.done == 0">
+            <input type="checkbox" ng-disabled="todo.done == 1" ng-change="todoStatusChanged(todo)" ng-value="todo.done" ng-model="todo.done">
         </td>
+        <td ng-show="todo.done == 1">
+            Completed
+        </td>        
     </tr>
 </table>

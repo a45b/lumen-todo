@@ -44,8 +44,8 @@ app.controller('CreateCtrl', function ($scope, $http, $location) {
     };
  
     $scope.createTodo = function () {
-        console.log($scope.todo);
-        $http.post('/api/v1/todos', $scope.todo).success(function (data) {
+        console.log($scope.todo);        
+        $http.post('/create', $scope.todo).success(function (data) {
             $location.path('/');
         }).error(function (data, status) {
             console.log('Error ' + data)
